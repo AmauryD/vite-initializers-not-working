@@ -1,0 +1,12 @@
+diff --git a/dist/initializers/ember-simple-auth.js b/dist/initializers/ember-simple-auth.js
+index 005043d3e9e94a09e7150f224152efef70fc9512..88923f4891efa50abd1ddb029d05f0c5c7043d93 100644
+--- a/dist/initializers/ember-simple-auth.js
++++ b/dist/initializers/ember-simple-auth.js
+@@ -7,6 +7,7 @@ import Cookie from '../session-stores/cookie.js';
+ var emberSimpleAuth = {
+   name: 'ember-simple-auth',
+   initialize(registry) {
++    console.log("executing ember-simple-auth initializer");
+     const ENV = registry.resolveRegistration('config:environment');
+     const config = ENV['ember-simple-auth'] || {};
+     config.rootURL = ENV.rootURL || ENV.baseURL;

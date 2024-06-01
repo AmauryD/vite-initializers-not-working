@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  ember-simple-auth@6.0.0:
+    hash: 67buhx3nbok5sm77dutacq52fu
+    path: patches/ember-simple-auth@6.0.0.patch
+
 devDependencies:
   '@babel/core':
     specifier: ^7.24.4
@@ -80,6 +85,9 @@ devDependencies:
   ember-resolver:
     specifier: ^11.0.1
     version: 11.0.1(ember-source@5.8.0)
+  ember-simple-auth:
+    specifier: ^6.0.0
+    version: 6.0.0(patch_hash=67buhx3nbok5sm77dutacq52fu)(@ember/test-helpers@3.3.0)
   ember-source:
     specifier: ~5.8.0
     version: 5.8.0(@babel/core@7.24.6)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.91.0)
@@ -6648,6 +6656,15 @@ packages:
       - supports-color
     dev: true
 
+  /ember-cookies@1.1.2:
+    resolution: {integrity: sha512-6GaN0eEDZT9SEUSZBxWzZMlvxjcGKXFTJNjv30LVXTTOxozE5IBmIxiDAEq0udi0UpWUGHLYQBgnANn4jdll7w==}
+    engines: {node: '>= 16.*'}
+    dependencies:
+      '@embroider/addon-shim': 1.8.9
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /ember-data@5.3.3(@babel/core@7.24.6)(@ember/string@3.1.1)(ember-source@5.8.0):
     resolution: {integrity: sha512-T8+cfFtkZ9hPZ+7t1SAjXkAqvW3dSpY83IuOzUZf7kgoiJkR0C3cQTBteULrseDR9GoKQOkmiWrTphRzyy9RFg==}
     engines: {node: '>= 18.19.1'}
@@ -6784,6 +6801,27 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /ember-simple-auth@6.0.0(patch_hash=67buhx3nbok5sm77dutacq52fu)(@ember/test-helpers@3.3.0):
+    resolution: {integrity: sha512-9SzSFApxZ74CD4UxIeTV+poIPeXcRLXWM60cMvC1SwTYjoc/p9DeQF0pVm6m1XV6uA3kPUzEsEn4/GeHc2YX1w==}
+    peerDependencies:
+      '@ember/test-helpers': '>= 3 || > 2.7'
+    peerDependenciesMeta:
+      '@ember/test-helpers':
+        optional: true
+    dependencies:
+      '@ember/test-helpers': 3.3.0(ember-source@5.8.0)(webpack@5.91.0)
+      '@ember/test-waiters': 3.1.0
+      '@embroider/addon-shim': 1.8.9
+      '@embroider/macros': 1.16.2
+      ember-cli-is-package-missing: 1.0.0
+      ember-cookies: 1.1.2
+      silent-error: 1.1.1
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+    dev: true
+    patched: true
 
   /ember-source@5.8.0(@babel/core@7.24.6)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.91.0):
     resolution: {integrity: sha512-jRmT5egy7XG2G9pKNdNNwNBZqFxrl7xJwdYrJ3ugreR7zK1FR28lHSR5CMSKtYLmJZxu340cf2EbRohWEtO2Zw==}
